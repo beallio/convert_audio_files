@@ -1,4 +1,4 @@
-convert_audio_files
+Convert Audio Files
 ===================
 
 Converts audio files to FLAC using FFMPEG
