@@ -22,7 +22,7 @@ class ConvertFiles():
             self._file_type = '.' + self._file_type
 
         files_to_edit = [[dp, f] for dp, _, filenames in os.walk(self._input_dir) for f in filenames if
-                         f.endswith(self._file_type)]
+                         f.lower().endswith(self._file_type)]
         total_file_count = len(files_to_edit)
         if total_file_count > 0:
             file_count = 0
@@ -35,7 +35,7 @@ class ConvertFiles():
                 subprocess.call(['ffmpeg', '-i', input_file, output_file])
                 if self._remove_source_file:
                     os.remove(input_file)
-            print 'Process complete. {0} files process.'.format(total_file_count)
+            print 'Process complete. {0} files processed.'.format(total_file_count)
         else:
             print 'No files found.'
 
