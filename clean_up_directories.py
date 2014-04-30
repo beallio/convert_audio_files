@@ -1,3 +1,4 @@
+#!/usr/bin/env python
 """
 Used to clean up non-audio files in music directory.  Remove files and empty directories
 """
