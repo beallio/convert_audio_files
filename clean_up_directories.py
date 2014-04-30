@@ -8,6 +8,7 @@ import argparse
 import sys
 import datetime
 
+
 class CleanUpDirectories():
     def __init__(self, args):
         """
@@ -27,7 +28,7 @@ class CleanUpDirectories():
     def clean_up_files(self):
         time_start = datetime.datetime.utcnow()
         files_to_clean = [[dp, f] for dp, _, filenames in os.walk(self._input_dir) for f in filenames if
-                         os.path.splitext(f)[1].lower() not in self._file_type]
+                          os.path.splitext(f)[1].lower() not in self._file_type]
         #total_file_count = len(files_to_clean)
         file_count = 0
         dir_count = 0
@@ -62,8 +63,3 @@ else:
     pass
 
 # exit file
-
-
-
-
-
